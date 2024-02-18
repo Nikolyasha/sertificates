@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       <div class="dropdown_container" id="${countInputs}">
             <div class="dropdown_button">
-              <img src="img/dropdown.svg" alt="" class="dropdown_button-img" id="${countInputs}" onclick="clickDropdownButton(event)">
+              <img src="img/dropdown.svg" alt="" class="dropdown_button-img" id="${countInputs}" onclick="clickDropdownButton(event)" draggable="false">
             </div>
             <div class="dropdown_menu_wrapper point_dropdown" id="${countInputs}">
               <div class="dropdown_menu point_dropdown">
@@ -242,21 +242,21 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
 
               <div class="color_picker_align point_dropdown">
-                <img src="img/align-center.svg" alt="" class="color_picker_align-img point_dropdown" id="${countInputs}" onclick="clickAlignPicker(event)" >
+                <img src="img/align-center.svg" alt="" class="color_picker_align-img point_dropdown" id="${countInputs}" onclick="clickAlignPicker(event)" draggable="false">
 
                 <div class="color_picker_align-dropdown" id="${countInputs}">
                 <div class="color_picker_align-dropdown-wrapper point_dropdown"  id="${countInputs}">
                   <div class="align-dropdown-wrapper-item point_dropdown">
-                    <img src="img/align-center.svg" alt="center" class="point_dropdown align-dropdown-wrapper-img">
+                    <img src="img/align-center.svg" alt="center" class="point_dropdown align-dropdown-wrapper-img"draggable="false">
                   </div>
                   <div class="align-dropdown-wrapper-item point_dropdown">
-                    <img src="img/align-justify.svg" alt="justify" class="point_dropdown align-dropdown-wrapper-img">
+                    <img src="img/align-justify.svg" alt="justify" class="point_dropdown align-dropdown-wrapper-img"draggable="false">
                   </div>
                   <div class="align-dropdown-wrapper-item point_dropdown">
-                    <img src="img/align-left.svg" alt="start" class="point_dropdown align-dropdown-wrapper-img">
+                    <img src="img/align-left.svg" alt="start" class="point_dropdown align-dropdown-wrapper-img"draggable="false">
                   </div>
                   <div class="align-dropdown-wrapper-item point_dropdown">
-                    <img src="img/align-right.svg" alt="end" class="point_dropdown align-dropdown-wrapper-img">
+                    <img src="img/align-right.svg" alt="end" class="point_dropdown align-dropdown-wrapper-img"draggable="false">
                   </div>
                 </div>
                 </div>
@@ -795,6 +795,12 @@ document.addEventListener("click",(event)=>{
     currentElemOnCanvas=null;  
   }
 
+  for(const item of selectDropdown){
+    item.addEventListener("click",()=>{
+
+    });
+  }
+
   
   
   if(!event.target.classList.contains("color_picker_button")){
@@ -982,11 +988,11 @@ function styleNone(){
     elem.classList.remove("border-elem")
   };
   for(const dropBtn of dropdownButton){
-    dropBtn.style.display="none";
+    dropBtn.style.opacity="0";
   };
-  // for(const dropMenu of dropdownMenu){
-  //   dropMenu.style.display="none";
-  // };
+  for(const dropMenu of dropdownMenu){
+    dropMenu.style.opacity="0";
+  };
   document.body.style.overflow = "hidden";
 
 };
@@ -997,11 +1003,11 @@ function styleAdd(){
     elem.classList.add("border-elem")
   };
   for(const dropBtn of dropdownButton){
-    dropBtn.style.display="block";
+    dropBtn.style.opacity="1";
   };
-  // for(const dropMenu of dropdownMenu){
-  //   dropMenu.style.display="block";
-  // };
+  for(const dropMenu of dropdownMenu){
+    dropMenu.style.opacity="1";
+  };
 };
 
 

@@ -56,23 +56,23 @@
         <p>Номер <br> сертификата</p>
       </div>
       <div class="tool-item" draggable="true" id="elemTheme">
-        <img src="img/label.svg" alt="">
+        <img src="img/label.svg" alt=""draggable="false">
         <p>Тема</p>
       </div>
       <div class="tool-item" draggable="true" id="elemDate">
-        <img src="img/calendar.svg" alt="">
+        <img src="img/calendar.svg" alt=""draggable="false">
         <p>Дата <br>получения</p>
       </div>
       <div class="tool-item" draggable="true" id="elemName">
-        <img src="img/person.svg" alt="">
+        <img src="img/person.svg" alt=""draggable="false">
         <p>Имя <br> фамилия</p>
       </div>
       <div class="tool-item" draggable="true" id="elemImg">
-        <img src="img/image.svg" alt="">
+        <img src="img/image.svg" alt=""draggable="false">
         <p>Изображение</p>
       </div>
       <div class="tool-item" draggable="true" id="elemTxt">
-        <img src="img/text.svg" alt="">
+        <img src="img/text.svg" alt=""draggable="false">
         <p>Текст</p>
       </div>
 

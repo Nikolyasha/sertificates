@@ -3,6 +3,9 @@ html{
   width: 100%;
 
 }
+img{
+  /* pointer-events: none */
+}
 body{
   width: 100%;
   display: flex;
